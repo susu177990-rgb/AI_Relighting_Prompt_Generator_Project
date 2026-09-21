@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Layout redesign comparison</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #050708; color: #f3f3ef; font-family: Arial, sans-serif; }
+      main { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; min-height: 100vh; padding: 16px; }
+      section { overflow: hidden; border: 1px solid #2b3032; border-radius: 14px; background: #0d1011; }
+      header { display: grid; gap: 3px; padding: 12px 14px; border-bottom: 1px solid #2b3032; }
+      strong { font-size: 12px; }
+      span { color: #899092; font-size: 10px; }
+      .frame { display: grid; height: calc(100vh - 78px); place-items: center; padding: 12px; }
+      img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <header><strong>修改前</strong><span>标题、副标题与步骤提示占据首屏</span></header>
+        <div class="frame"><img src="/qa-source-layout.png" alt="修改前的标题区域" /></div>
+      </section>
+      <section>
+        <header><strong>修改后</strong><span>三维光位画布成为主体，参数收纳到右侧悬浮栏</span></header>
+        <div class="frame"><img src="/qa-implementation-layout.png" alt="修改后的全屏三维光位界面" /></div>
+      </section>
+    </main>
+  </body>
+</html>
